@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Datos Personales</title>
+    </head>
+    <body>
+        <h2>Rellena tu CV</h2>
+        <form action="" method="post">
+            Nombre<br/>
+            <input type="text" name="nombre" value="" size="20" maxlength="20">
+            <br/>
+            Apellidos<br/>
+            <input type="text" name="apellidos" value="" size="30" maxlength="30">
+            <br/>
+            Contraseña<br/>
+            <input type="password" name="contrasena" value="" size="20" maxlength="15">
+            <br/>
+            Confirme contraseña<br/>
+            <input type="password" name="contrasena" value="" size="20" maxlength="15">
+            <br/>
+            Identificación<br/>
+            <select name="identificacion">
+                <option value="CC" selected>CC</option>
+                <option value="TI">TI</option>
+                <option value="CE">CE</option>
+            </select>
+            <input type="number" name="numero_id" value="" size="10" maxlength="12">
+            <br/>
+            Sexo <br/>
+            <input type="radio" name="sexo" value="hombre" checked="checked" />
+            Hombre<br/>
+            <input type="radio" name="sexo" value="mujer"  />
+            Mujer<br/>
+            <br/>
+            Incluir mi foto <input type="file" name="foto"/>
+            <br/>
+            <input name="estudiante" type="checkbox" value="estudiante" checked="checked" />
+            Estudiante
+            <br/><br/>
+            <fieldset>
+                <legend>Datos personales</legend>
+                Departamento
+                <br/>
+                <select>
+                    <option value="santander" seleted>Santander</option>
+                    <option value="antioquia" >Antioquia</option>
+                    <option value="cundinamarca">Cundinamarca</option>
+                </select>
+                <br/><br/>
+                Fecha de nacimiento<br/>
+                <input type="numer" name="dia" value="" size="8" maxlength="2" />
+                <select name="mes">
+                    <option value="enero" selected>Enero</option>
+                    <option value="febrero">Febrero</option>
+                    <option value="marzo">Marzo</option>
+                    <option value="abril">Abril</option>
+                    <option value="mayo">Mayo</option>
+                    <option value="junio">Junio</option>
+                    <option value="julio">Julio</option>
+                    <option value="agosto">Agosto</option>
+                    <option value="septiembre">Septiembre</option>
+                    <option value="octubre">Octubre</option>
+                    <option value="noviembre">Noviembre</option>
+                    <option value="diciembre">Diciembre</option>
+                </select>
+                <input type="number" name="anio" value="" size="8" maxlength="4"/>
+                <br/><br/>
+                Temas de interés<br/>
+                <select name="interes">
+                    <option value="admon_bases" selected>Administración de bases de datos</option>
+                    <option value="analisis_prog">Análisis y programación</option>
+                    <option value="arquitectura">Arquitectura</option>
+                    <option value="calidad">Calidad</option>
+                    <option value="erp__crm_bs">ERP, CRM, Business intelligence</option>
+                </select><br/><br/>
+            </fieldset>  <br/>   
+            <input type="submit" name="guardar_cambios" value="Guardar Cambios" />
+            <input type="reset" name="borrar_datos" value="Borrar los datos introducidos" />       
+        </form>
+    </body>
+</html>
