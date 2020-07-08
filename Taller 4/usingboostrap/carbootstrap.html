@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Coches</title>
+    <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="./css/body.css">
+</head>
+<body>
+    <div id="cabecera">
+    <div id="encabezado" class="container-lg">
+        <h1>Registre su Coche</h1>
+    </div>
+    </div>
+    <br/><br/>
+    <div id="formulario" class="container-lg">
+        <form action="https://www.google.com" method="POST">
+            Identificación del Coche<br/>
+            <input type="number" name="identificacion" value="" maxlength="11" size="20" class="form-control"><br/><br/>
+            <div class="form-row">
+                <div class="col"> 
+                Tipo de Combustible<br/>               
+                    <select name="combustible" class="form-control">
+                        <option value="111">Gasolina</option>
+                        <option value="222">Diesel</option>
+                        <option value="333">ACPM</option>
+                    </select>
+                </div><br/>
+                <div class="col"> 
+                Tipo de Coche<br/>
+                    <select name="tipo" class="form-control">
+                        <option value="111">Cupé</option>
+                        <option value="222">Roadster</option>
+                        <option value="333">Familiar</option>
+                        <option value="444">Todoterreno</option>
+                    </select>
+                </div><br/>
+            </div><br/>
+            <div class="form-row">
+                <div class="col">
+                Estado del Coche<br/>           
+                    <select name="estado" class="form-control" >
+                        <option value="111">Nuevo</option>
+                        <option value="222">Usado</option>
+                    </select>
+                </div><br/>
+                <div class="col">
+                Marca<br/>                
+                    <select name="marca" class="form-control">
+                        <option value="111">Audi</option>
+                        <option value="222">Mercedez</option>
+                        <option value="333">Toyota</option>
+                        <option value="444">Renault</option>
+                        <option value="555">Mazda</option>
+                    </select>
+                </div><br/>
+            </div><br/>
+            Id de Usuario<br/>
+            <div>
+                <select name="id_usuario" class="form-control">
+                    <option value="1">Einer</option>
+                    <option value="2">Steven</option>
+                    <option value="3">Hernando</option>
+                    <option value="4">José</option>
+                    <option value="5">Jaime</option>
+                    <option value="6">Luis</option>
+                </select>  
+            </div><br/>
+            Modelo<br/>
+            <input type="text" name="modelo" class="form-control" value="" maxlength="60" size="20"><br/><br/>
+            Año<br/>
+            <input type="text" name="anio" class="form-control" value="" maxlength="4" size="20"><br/><br/>
+            Detalle<br/>
+            <input type="text" name="detalle" class="form-control" value="" size="20"><br/><br/>
+            Caja<br/>
+            <input type="number" name="caja" class="form-control" value="" size="20"><br/><br/>
+            Motor<br/>
+            <input type="text" name="motor" class="form-control" value="" size="20" maxlength="20"><br/><br/>
+            Fecha de Publicación<br/>
+            <input type="text" name="fecha_pub" class="form-control" value="" size="20" maxlength="10"><br/><br/>
+            Precio<br/>
+            <input type="text" name="precio" class="form-control" value="" size="20" maxlength="20"><br/><br/>
+            Moneda<br/>
+            <input type="text" name="moneda" class="form-control" value="" size="20" maxlength="3"><br/><br/>
+            Descripción 1<br/>
+            <input type="text" name="descripcion_1" class="form-control" value="" maxlength="85" size="20"><br/><br/>
+            Descripción 2<br/>
+            <input type="text" name="descripcion_2" class="form-control" value="" maxlength="85" size="20"><br/><br/>
+            Descripción 3<br/>
+            <input type="text" name="descripcion_3" class="form-control" value="" maxlength="85" size="20"><br/><br/>
+            Destac<br/>
+            <input type="text" name=destac value="" maxlength="2" class="form-control" size="20"><br/><br/>
+            <input type="submit" value="Registrar" class="btn btn-primary btn-lg btn-block"><br/><br/>
+        </form>
+    </div>
+</body>
+</html>
