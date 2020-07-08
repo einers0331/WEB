@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Coches</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+            $('select').formSelect();
+        });
+        </script>
+        
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+        
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</head>
+<body class="#fff9c4 yellow lighten-4">
+    <div class="#fdd835 yellow darken-1 center-align container card-panel">
+        <h1>Registre su Coche</h1>
+    </div>
+    <div  class="container">
+        <form action="https://www.google.com" method="POST" >
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="identificacion_coche" type="text" class="validate">
+                    <label for="identificacion_coche">Identificaion Coche</label>
+                </div>
+
+                <div class="input-field col s6">
+                    <select>
+                      <option value="" disabled selected>Escoge tu opcion</option>
+                      <option value="1">Gasolina</option>
+                      <option value="2">Diesel</option>
+                      <option value="3">ACPM</option>
+                    </select>
+                    <label>Tipo de combustible</label>
+                  </div>
+              </div>
+
+              <div class="row">
+              <div class="input-field col s6">
+                <select>
+                        <option value="111">Cupé</option>
+                        <option value="222">Roadster</option>
+                        <option value="333">Familiar</option>
+                        <option value="444">Todoterreno</option>
+                </select>
+                <label>Tipo de coche</label>
+                </div>
+                
+
+          <div class="input-field col s6">
+            <select>
+                <option value="111">Nuevo</option>
+                <option value="222">Usado</option>
+            </select>
+            <label>Estado del coche</label>
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+            <select>
+                <option value="111">Audi</option>
+                    <option value="222">Mercedez</option>
+                    <option value="333">Toyota</option>
+                    <option value="444">Renault</option>
+                    <option value="555">Mazda</option>
+            </select>
+            <label>Marca</label>
+          </div>
+          <div class="input-field col s6">
+            <select>
+                <option value="111">Audi</option>
+                <option value="1">Einer</option>
+                <option value="2">Steven</option>
+                <option value="3">Hernando</option>
+                <option value="4">José</option>
+                <option value="5">Jaime</option>
+                <option value="6">Luis</option>
+            </select>
+            <label>ID usuario</label>
+          </div>
+
+      </div>
+      <div class="row">
+        <div class="input-field col s4">
+            <input id="modelo" type="text" class="validate"maxlength="60" size="20">
+            <label for="modelo">Modelo</label>
+        </div>
+
+        <div class="input-field col s4">
+            <input id="año" type="text" class="validate" maxlength="4" size="20">
+            <label for="año">año</label>
+        </div>
+        <div class="input-field col s4">
+            <input id="detalle" type="text" class="validate">
+            <label for="detalle">detalle</label>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="input-field col s4">
+            <input id="caja" type="text" class="validate"maxlength="60" size="20">
+            <label for="caja">caja</label>
+        </div>
+        <div class="input-field col s4">
+            <input id="motor" type="text" class="validate"maxlength="60" size="20">
+            <label for="motor">motor</label>
+        </div>
+        <div class="input-field col s4">
+            <input id="fecha_publicacion" type="text" class="validate"maxlength="60" size="20">
+            <label for="fecha_publicacion">fecha de publicacion</label>
+        </div>
+
+      </div>
+      <div class="row">
+
+        <div class="input-field col s4">
+            <input id="precio" type="text" class="validate"maxlength="60" size="20">
+            <label for="precio">precio</label>
+        </div>
+        <div class="input-field col s4">
+            <input id="moneda" type="text" class="validate"maxlength="60" size="20">
+            <label for="moneda">moneda</label>
+        </div>
+        <div class="input-field col s4">
+            <input id="descripcion_1" type="text" class="validate"maxlength="60" size="20">
+            <label for="descripcion_1">descripcion 1</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s4">
+            <input id="descripcion_2" type="text" class="validate"maxlength="60" size="20">
+            <label for="descripcion_2">descripcion 2</label>
+        </div>
+        <div class="input-field col s4">
+            <input id="descripcion_3" type="text" class="validate"maxlength="60" size="20">
+            <label for="descripcion_3">descripcion 3</label>
+        </div>
+        <div class="input-field col s4">
+            <input id="destac" type="text" class="validate"maxlength="60" size="20">
+            <label for="destac">destac</label>
+        </div>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+        </form>
+    </div>
+</body>
+</html>
