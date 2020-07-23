@@ -19,8 +19,10 @@
         
         <!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-        
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="../js/mostrar.js" type="text/javascript"></script>
+        <link href="nouislider.css" rel="stylesheet">
+        <script src="nouislider.js"></script>
     </head>
     <body>
         <div class="card-panel #e0f2f1 teal lighten-5">
@@ -63,7 +65,16 @@
                     <input type="text" id="email"name="email" value="" size="20" maxlength="130"><br/><br/>
                     Teléfono<br/>
                     <input type="text"  id ="telefono"name="telefono" value="" size="20" maxlength="20"><br/><br/>
-                    <input class="waves-effect waves-light btn" type="submit" value="Registrarme" onclick="return enviarFormulario()">
+
+                    <label id="a"><input type="text" id="color" name="color" value="" size="20">color favorito</label><br><br>
+                    <label id="b"><input type="text" id="marca" name="marca" value="" size="20">marca favorita</label><br><br>
+                    <label id="c"><input type="text" id="estilo" name="estilo" value="" size="20">estilo favorito</label><br><br>
+                    <label id="d"><input type="text" id="modelo" name="modelo" value="" size="20">modelo favorito</label><br><br>
+                    <div id="test-slider"></div>
+                    <button class="waves-effect waves-light btn" id="mostrar" type="button">mostrar</button>
+                        <button class="waves-effect waves-light btn" id="ocultar" type="button">ocultar</button>
+                        <br/><br/>
+                    <input class="waves-effect waves-light btn" type="submit" value="Registrarme">
                     <br/><br/>
                 </form>
             </div>
