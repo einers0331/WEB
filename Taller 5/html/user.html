@@ -21,8 +21,26 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="../js/mostrar.js" type="text/javascript"></script>
-        <link href="nouislider.css" rel="stylesheet">
-        <script src="nouislider.js"></script>
+        <link href="../css/nouislider.css" rel="stylesheet">
+        <script src="../js/nouislider.js" type="text/javascript"></script>
+        <style>
+            #showcase {
+                margin: auto;
+                text-align: center;
+            }
+            #range {
+                height: 20px;
+                margin: auto ;
+            }
+            #value-span,
+            #value-input {
+                width: auto;
+                float: left;
+                display: block;
+                text-align: center;
+                margin: 0;
+            }
+        </style>
     </head>
     <body>
         <div class="card-panel #e0f2f1 teal lighten-5">
@@ -38,17 +56,6 @@
                     <br/>
                     Identificación<br/>
                     <input type="number" name="identificacion" value="" size="20" maxlength="11"><br/><br/>
-                    País<br/>
-                    <div class="input-field col 14">
-                        <select name="pais" >
-                            <option value="1" selected>1. Colombia</option>
-                            <option value="2">2. Chile</option>
-                            <option value="3">3. Brasil</option>
-                            <option value="4">4. Argentina</option>
-                            <option value="5">5. Estados Unidos</option>
-                            <option value="6">6. España</option>
-                        </select>
-                    </div><br/><br/>
                     Nombre<br/>
                     <input type="text" id="nombre" name="nombre" value="" size="20" maxlength="40"><br/><br/>
                     Apellido<br/>
@@ -70,9 +77,10 @@
                     <label id="b"><input type="text" id="marca" name="marca" value="" size="20">marca favorita</label><br><br>
                     <label id="c"><input type="text" id="estilo" name="estilo" value="" size="20">estilo favorito</label><br><br>
                     <label id="d"><input type="text" id="modelo" name="modelo" value="" size="20">modelo favorito</label><br><br>
-                    <div id="test-slider"></div>
-                    <button class="waves-effect waves-light btn" id="mostrar" type="button">mostrar</button>
-                        <button class="waves-effect waves-light btn" id="ocultar" type="button">ocultar</button>
+                    <label id="e">rango de precio dolares</label><br><br>
+                    <div id="range"></div><br><br><br>
+                    <button class="waves-effect waves-light btn" id="mostrar" type="button">agregar preferencia de carro</button>
+                        <button class="waves-effect waves-light btn" id="ocultar" type="button">no agregar preferencia de carro</button>
                         <br/><br/>
                     <input class="waves-effect waves-light btn" type="submit" value="Registrarme">
                     <br/><br/>
@@ -82,4 +90,42 @@
         <script type="text/javascript" src="../js/validacion.js">
         </script>
     </body>
+    <script>
+        var range = document.getElementById('range');
+    
+        noUiSlider.create(range, {
+            start: [ 10000, 40000 ], // Handle start position
+            step: 10000, // Slider moves in increments of '10'
+            margin: 10000, // Handles must be more than '20' apart
+            connect: true, // Display a colored bar between the handles
+            direction: 'ltr', // Put '0' at the bottom of the slider
+            orientation: 'horizontal', // Orient the slider vertically
+            behaviour: 'tap-drag', // Move handle on tap, bar is draggable
+            range: { // Slider can select '0' to '100'
+                'min': 10000,
+                'max': 100000
+            },
+            pips: { // Show a scale with the slider
+                mode: 'steps',
+                density: 2
+            }
+        });
+    
+        var valueInput = document.getElementById('value-input'),
+                valueSpan = document.getElementById('value-span');
+    
+        // When the slider value changes, update the input and span
+        range.noUiSlider.on('update', function( values, handle ) {
+            if ( handle ) {
+                valueInput.value = values[handle];
+            } else {
+                valueSpan.innerHTML = values[handle];
+            }
+        });
+    
+        // When the input changes, set the slider value
+        valueInput.addEventListener('change', function(){
+            range.noUiSlider.set([null, this.value]);
+        });
+    </script>
 </html>
