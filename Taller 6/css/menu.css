@@ -1,0 +1,14 @@
+body{
+    background-color: #aed581;
+}
+#menu{
+    background-color: #2e7d32;
+    text-align: center;
+}
+#menu ul li{
+    display: inline;
+    float: none;
+}
+#menu ul li a {
+    display: inline-block;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/menu.css" type="text/css" rel="stylesheet">
+    <title>Web server</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+</head>
+<body>
+    <nav id="menu" >
+        <div id="centro">
+            <div id="contenedor1" class="nav-wrapper"> 
+                <ul  id="nav-mobile" >           
+                    <li class="linea"><a href="../html/index.html">Inicio</a></li>
+                    <li class="linea"><a href="#formulario">Registro</a></li>
+                    <li class="linea"><a href="#grilla">Grilla</a></li>
+                </ul>
+            </div> 
+        </div>
+    </nav>
+
+    <div id="formulario" class="container">
+        <form action="###" method="GET" onsubmit="return validacion()">
+            <br/>
+            Nombre<br/> 
+            <input type="text" id="nombre" name="nombre" value="" size="20" maxlength="40"><br/><br/>
+            Apellido<br/>
+            <input type="text" id='apellido'name="apellido" value="" size="20" maxlength="40"><br/><br/>
+            Fecha de Nacimiento<br/>
+            <input type="date" id='fecha_nac'name="nacimiento" value="" size="20" maxlength="40" min="1940-01-01" max="2010-12-31"><br/><br/>
+            Email<br/>
+            <input type="text" id="email" name="email" value="" size="20" maxlength="130"><br/><br/>
+            Usuario<br/>
+            <input tupe="text" id='usuario'name="usuario" value="" size="20" maxlength="25"><br/><br/>
+            Contraseña<br/>
+            <input type="password" id="contrasena" name="contrasena" value="" size="20" maxlength="30"><br/><br/>
+            Confirmar Contraseña<br/>
+            <input type="password" id="conf_contrasena" name="conf_contrasena" value="" size="20" maxlength="30"><br/><br/>
+            A sufrido enfermedades?</br></br>
+            <div id="areadetexto"></div>
+            <button class="waves-light green accent-4 btn" id="mostrar" type="button">Si</button>
+            <button class="waves-light green accent-4 btn" id="ocultar" type="button">No</button></br></br>
+            <input class="waves-light btn green accent-3" type="submit" value="Registrarme">
+            <br/><br/>
+        </form>
+    </div>
+<script type="text/javascript" src="../js/validacion.js"></script>
+</body>
+</html>
