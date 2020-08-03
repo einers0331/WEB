@@ -56,15 +56,3 @@ $(document).ready(function(){
         $("#areadetexto").hide();
     });
 });
-
-$(document).ready(function()
-{
-    $("#boton").click(function(){
-        $.get('https://jsonplaceholder.typicode.com/users',function(datos){
-            var info = datos[0].name;
-                info += " - " + datos[0].phone;
-                info += "</br>" + datos[0].website;
-                $("#salida").html(info);
-        });
-    });
-});
