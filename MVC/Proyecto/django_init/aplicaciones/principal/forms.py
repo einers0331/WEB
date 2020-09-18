@@ -5,4 +5,4 @@ class PersonaForm(forms.ModelForm):
     class Meta:
         model = Persona
         fields = '__all__'
-        contraseña=forms.CharField(widget=forms.PasswordInput)
+        #contraseña=forms.CharField(widget=forms.PasswordInput)

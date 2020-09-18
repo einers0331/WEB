@@ -4,17 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block titulo %}Listado de contacto{% endblock titulo %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-<body>
+<body class="bg-light">
     {% block cuerpo %}
-    <h1>Template de listado</h1>
-    <table border="2">
+    <div class="navbar navbar-light bg-light"><h1 style="margin-left: 100px;">Lista de Usuarios</h1></div><br><br>
+    
+        
+        <table  class="table">
+            
         <thead>
             <tr>
-                <th>nombre</th>
-                <th>apellido</th>
-                <th>correo</th>
-                <th>OPCION</th>
+                <th scope="col" >nombre</th>
+                <th scope="col">apellido</th>
+                <th scope="col">id documento</th>
+                <th scope="col">correo</th>
+                <th scope="col">documento</th>
+                <th scope="col">residencia</th>
+                <th scope="col">nacimiento</th>
+                <th scope="col">telefono</th>
+                <th scope="col">usuario</th>
+                <!--<th scope="col">contraseña</th>-->
+                <th scope="col">OPCION</th>
             </tr>
         </thead>
         <tbody>
@@ -22,12 +33,22 @@
             <tr>
                 <td>{{persona.nombre}}</td>
                 <td>{{persona.apellido}}</td>
+                <td>{{persona.iddocumento}}</td>
                 <td>{{persona.correo}}</td>
-                <td><a href="{% url 'editar_persona' persona.id%}">EDITAR</a></td> <td><a href="{% url 'eliminar_persona' persona.id%}">ELIMINAR</a></td>
+                <td>{{persona.documento}}</td>
+                <td>{{persona.residencia}}</td>
+                <td>{{persona.nacimiento}}</td>
+                <td>{{persona.telefono}}</td>
+                <td>{{persona.usuario}}</td>
+                <!--<td>{{persona.contraseña}}</td>-->
+                <td ><button class="btn btn-info"><a style="color: #fff; text-decoration: none;" href="{% url 'editar_persona' persona.id%}" >EDITAR</a></button> <button class="btn btn-danger"><a style="color: #fff; text-decoration: none;" href="{% url 'eliminar_persona' persona.id%}">ELIMINAR</a></button></td>
+                
             </tr>
             {%endfor%}
-        </tbody>
-    </table>
+            
+        </tbody></div>
+    </table><br><br>
+<button class="btn btn-primary"style="margin-left: 100px;"><a style="color: #fff; text-decoration: none;" href="{%url 'crear_persona'%}">CREAR USUARIO</a></button>
     {% endblock cuerpo %}
 </body>
 </html>

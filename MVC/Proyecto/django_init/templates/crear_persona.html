@@ -3,10 +3,15 @@
 
 {% block cuerpo %}
 
-<form method="POST"> 
+<div class="navbar navbar-light bg-light"><h1 style="margin-left: 40%;justify-content: center;">Crear o Editar Usuario</h1>
+<div class="container" style="justify-content: center;margin-top: 100px;margin-left: 40%;margin-right: 40%;">
+<form class="form-group" method="POST"> 
+
 {%csrf_token%}
 {{ form.as_p}}
-<button  type="submit">editar </button>
+<button  class="btn btn-primary" type="submit">Crear o Editar</button>
+
 </form>
 
+</div>
 {% endblock cuerpo %}

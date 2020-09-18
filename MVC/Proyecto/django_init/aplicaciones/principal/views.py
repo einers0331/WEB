@@ -18,7 +18,7 @@ def crearPersona(request):
     else:
         form = PersonaForm(request.POST)    
         contexto={
-    '       form':form
+            'form':form
     }
     if form.is_valid():
         form.save()
